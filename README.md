@@ -17,8 +17,7 @@ Steps to run project
  
 The project currrently has the primary key for the user set to Guid. To change it to int,
 - Navigate to IdentityModel.cs and change the places where Guid is used to int. Remove the constructor in ApplicationUser to set the Id.
-- Change the ApplicationDbContext and ApplicationUserManager references of Guid to int
-- Make corresponding changes in controller classes from Guid.Parse to Int32.parse
-- 
+- Change the ApplicationDbContext and ApplicationUserManager references of Guid to int.
+- Make corresponding changes in controller classes from Guid.Parse() to Int32.parse()
 
 The EmailService class configures the method to send an email. Replace the credentials for the Gmail password and password with the ones for the app developer. This should use Gmail's smtp server to send the emails
